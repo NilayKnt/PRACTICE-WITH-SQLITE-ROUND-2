@@ -1,0 +1,16 @@
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# PostgreSQL 
+*.log
+*.sql.bak
+*.pgdump
+
+
+# IDE ve Editor
+.vscode/
+.idea/
