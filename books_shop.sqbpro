@@ -1,62 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="books_shop.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="pragmas structure browser query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1163"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="uyeler" custom_title="0" dock_id="3" table="4,6:mainuyeler"/><dock_state state="000000ff00000000fd0000000100000002000003a8000002f1fc0100000003fb000000160064006f0063006b00420072006f00770073006500310100000000000003c70000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000003c70000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000000003a80000010b00ffffff000003a80000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="kitaplar" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="127"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="odunc" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="53"/><column index="2" value="62"/><column index="3" value="111"/><column index="4" value="78"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="sqlite_sequence" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="39"/><column index="2" value="29"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="uyeler" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="23"/><column index="2" value="83"/><column index="3" value="31"/><column index="4" value="57"/><column index="5" value="114"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">PRAGMA foreign_keys = ON;
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="books_shop.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="pragmas structure browser query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1163"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="members" custom_title="0" dock_id="3" table="4,6:mainmembers"/><dock_state state="000000ff00000000fd0000000100000002000003a8000002f1fc0100000003fb000000160064006f0063006b00420072006f00770073006500310100000000000003c70000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000003c70000000000000000fb000000160064006f0063006b00420072006f00770073006500330100000000000003a80000010b00ffffff000003a80000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="books" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="127"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="borrows" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="53"/><column index="2" value="62"/><column index="3" value="111"/><column index="4" value="78"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="sqlite_sequence" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="39"/><column index="2" value="29"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="members" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="23"/><column index="2" value="83"/><column index="3" value="31"/><column index="4" value="57"/><column index="5" value="114"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">PRAGMA foreign_keys = ON;
 
 
-CREATE TABLE ogrenciler(
+CREATE TABLE students(
 id INTEGER PRIMARY KEY AUTOINCREMENT,
-ad  TEXT NOT NULL,
-yas INTEGER CHECK (yas &gt; 13),
-sehir TEXT DEFAULT 'Erzincan',
-kayit TEXT DEFAULT CURRENT_TIMESTAMP
+name TEXT NOT NULL,
+age INTEGER CHECK (age &gt; 13),
+city TEXT DEFAULT 'New York',
+created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 
 
-CREATE TABLE dersler(
+CREATE TABLE courses(
 id INTEGER PRIMARY KEY,
-ad TEXT UNIQUE NOT NULL
+name TEXT UNIQUE NOT NULL
 );
 
 
-CREATE TABLE notlar (
-ogrenci_id  INTEGER REFERENCES ogrenciler(id) ON DELETE CASCADE,
-ders_id INTEGER REFERENCES dersler(id),
-puan   REAL,
-PRIMARY KEY (ogrenci_id, ders_id)
+CREATE TABLE grades (
+student_id INTEGER REFERENCES students(id) ON DELETE CASCADE,
+course_id INTEGER REFERENCES courses(id),
+score REAL,
+PRIMARY KEY (student_id, course_id)
 );
 
-INSERT INTO dersler (id, ad) VALUES
-(1, 'Matematik'),
-(2, 'Fizik'),
-(3, 'Kimya'),
-(4, 'Biyoloji'),
-(5, 'Tarih');
+INSERT INTO courses (id, name) VALUES
+(1, 'Mathematics'),
+(2, 'Physics'),
+(3, 'Chemistry'),
+(4, 'Biology'),
+(5, 'History');
 
 
--- 20 tane öğrenci ekleyelim (yas &gt; 13 kuralına uygun)
-INSERT INTO ogrenciler (ad, yas, sehir) VALUES
-('Ahmet Yılmaz', 15, 'Ankara'),
-('Ayşe Demir', 16, 'İstanbul'),
-('Mehmet Kaya', 14, 'Erzincan'),
-('Fatma Çelik', 17, 'İzmir'),
-('Can Şahin', 15, 'Bursa'),
-('Zeynep Aydın', 18, 'Erzincan'),
-('Ali Koç', 14, 'Antalya'),
-('Elif Arslan', 16, 'Trabzon'),
-('Mustafa Yıldız', 15, 'Erzincan'),
-('İrem Öztürk', 17, 'Adana'),
-('Burak Korkmaz', 19, 'Konya'),
-('Merve Polat', 14, 'Erzincan'),
-('Emre Doğan', 16, 'Samsun'),
-('Selin Çetin', 15, 'Gaziantep'),
-('Kerem Aksoy', 18, 'Kayseri'),
-('Deniz Güler', 14, 'Erzincan'),
-('Cemre Yalçın', 17, 'Eskişehir'),
-('Onur Çakır', 15, 'Mersin'),
-('Gamze Tekin', 16, 'Erzincan'),
-('Umut Şen', 18, 'Diyarbakır');
+-- Insert 20 students (matching age &gt; 13 constraint)
+INSERT INTO students (name, age, city) VALUES
+('John Doe', 15, 'Chicago'),
+('Alice Smith', 16, 'New York'),
+('Michael Brown', 14, 'New York'),
+('Emma Davis', 17, 'Los Angeles'),
+('James Wilson', 15, 'Houston'),
+('Sophia Taylor', 18, 'New York'),
+('David Anderson', 14, 'Phoenix'),
+('Olivia Thomas', 16, 'Seattle'),
+('Daniel Jackson', 15, 'New York'),
+('Emily White', 17, 'Miami'),
+('Brian Harris', 19, 'Dallas'),
+('Grace Martin', 14, 'New York'),
+('Ethan Thompson', 16, 'Boston'),
+('Chloe Garcia', 15, 'Atlanta'),
+('Alexander Martinez', 18, 'Denver'),
+('Hannah Robinson', 14, 'New York'),
+('Sam Clark', 17, 'San Francisco'),
+('Andrew Lewis', 15, 'Detroit'),
+('Mia Lee', 16, 'New York'),
+('Oliver Walker', 18, 'San Diego');
 
 
--- Öğrencilere ders notları ekleyelim (JOIN sorgusunun çıktı vermesi için)
-INSERT INTO notlar (ogrenci_id, ders_id, puan) VALUES
+-- Insert student grades (for JOIN query output)
+INSERT INTO grades (student_id, course_id, score) VALUES
 (1, 1, 85.5), (1, 2, 70.0),
 (2, 1, 90.0), (2, 3, 78.5),
 (3, 2, 65.0), (3, 4, 82.0),
@@ -78,91 +78,85 @@ INSERT INTO notlar (ogrenci_id, ders_id, puan) VALUES
 (19, 2, 85.0), (19, 5, 88.5),
 (20, 3, 92.0), (20, 4, 94.5);
 
-SELECT o.ad , d.ad AS ders ,n.puan
-FROM notlar n
-JOIN ogrenciler o ON o.id = n.ogrenci_id
-JOIN dersler d ON d.id = n.ders_id;
+SELECT s.name AS student_name, c.name AS course_name, g.score
+FROM grades g
+JOIN students s ON s.id = g.student_id
+JOIN courses c ON c.id = g.course_id;
 
--- GRUPLAMA VE TOPLAMA FONKSİYONLARI
-SELECT ogrenci_id, AVG(puan) AS ort , COUNT(*) AS ders_sayisi, MAX(puan)
-FROM notlar
-GROUP BY ogrenci_id
-HAVING AVG(puan)&gt; 75;
-
-
--- ALT SORGU
+-- GROUPING AND AGGREGATION FUNCTIONS
+SELECT student_id, AVG(score) AS average_score, COUNT(*) AS course_count, MAX(score) AS max_score
+FROM grades
+GROUP BY student_id
+HAVING AVG(score) &gt; 75;
 
 
-SELECT ad FROM ogrenciler
-WHERE id IN (SELECT ogrenci_id FROM notlar  WHERE puan&gt;85);
+-- SUBQUERY
+SELECT name FROM students
+WHERE id IN (SELECT student_id FROM grades WHERE score &gt; 85);
 
 
 -- CASE
-SELECT ad,puan,
-CASE WHEN puan &gt;= 85 THEN 'AA' WHEN puan &gt;=70 THEN 'BB' ELSE 'ff' END  AS harf
-FROM notlar JOIN ogrenciler ON ogrenciler.id = notlar.ogrenci_id;
+SELECT name, score,
+CASE WHEN score &gt;= 85 THEN 'A' WHEN score &gt;= 70 THEN 'B' ELSE 'F' END AS grade_letter
+FROM grades JOIN students ON students.id = grades.student_id;
 
 
--- İNDEX
-CREATE INDEX idx_ogrenci_ad ON ogrenciler(ad);
-CREATE UNIQUE INDEX idx_eposta ON 
+-- INDEX
+CREATE INDEX idx_student_name ON students(name);
+CREATE UNIQUE INDEX idx_email ON students(email);
 
 </sql><sql name="SQL 3*">PRAGMA foreign_keys = ON;
 
-CREATE TABLE uyeler(
-                 id  INTEGER PRIMARY KEY AUTOINCREMENT,
-				 ad TEXT NOT NULL,
-				 yas INTEGER CHECK (yas&gt;13),
-				 sehir TEXT DEFAULT 'Erzincan',
-				 kayit TEXT DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE members(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    age INTEGER CHECK (age &gt; 13),
+    city TEXT DEFAULT 'New York',
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE kitaplar(
-                   id INTEGER PRIMARY KEY AUTOINCREMENT,
-                   kitap TEXT UNIQUE NOT NULL
-
+CREATE TABLE books(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT UNIQUE NOT NULL
 );
 
-
-
-CREATE TABLE odunc(
-                   uye_id INTEGER REFERENCES uyeler(id) ON DELETE CASCADE,
-				   kitap_id INTEGER REFERENCES kitaplar(id),
-                   verilis_tarihi TEXT DEFAULT CURRENT_TIMESTAMP,
-				   gun_sayisi INTEGER,
-				   PRIMARY KEY (uye_id, kitap_id)
- );
+CREATE TABLE borrows(
+    member_id INTEGER REFERENCES members(id) ON DELETE CASCADE,
+    book_id INTEGER REFERENCES books(id),
+    borrow_date TEXT DEFAULT CURRENT_TIMESTAMP,
+    borrow_days INTEGER,
+    PRIMARY KEY (member_id, book_id)
+);
  
- ----DROP TABLE odunc;
+----DROP TABLE borrows;
  
- 
- INSERT INTO kitaplar (kitap) VALUES
- ('Nutuk'),
-('Suç ve Ceza'),
-('Şeker Portakalı'),
+INSERT INTO books (title) VALUES
+('The Great Gatsby'),
+('Crime and Punishment'),
+('To Kill a Mockingbird'),
 ('1984'),
-('Kürk Mantolu Madonna');
+('The Catcher in the Rye');
 
-INSERT INTO uyeler (ad, yas, sehir) VALUES
-('Ahmet Yılmaz', 21, 'İstanbul'),
-('Ayşe Kaya', 19, 'Ankara'),
-('Mehmet Demir', 34, 'Erzincan'), 
-('Elif Çelik', 22, 'İzmir'),
-('Can Öztürk', 17, 'Erzincan'), 
-('Zeynep Arslan', 28, 'Bursa'),
-('Burak Şahin', 40, 'Erzincan'),
-('Selin Aydın', 21, 'Antalya'),
-('Emre Yıldız', 30, 'Erzincan'), 
-('Deniz Koç', 26, 'Eskişehir');
+INSERT INTO members (name, age, city) VALUES
+('John Doe', 21, 'New York'),
+('Alice Smith', 19, 'Chicago'),
+('Michael Brown', 34, 'Los Angeles'), 
+('Emma Davis', 22, 'Houston'),
+('James Wilson', 17, 'Los Angeles'), 
+('Sophia Taylor', 28, 'Seattle'),
+('Brian Harris', 40, 'Los Angeles'),
+('Selin Aydın', 21, 'Miami'),
+('Ethan Thompson', 30, 'Los Angeles'), 
+('David Anderson', 26, 'Boston');
 
-DROP TABLE uyeler;
+-- DROP TABLE members;
 
-INSERT INTO odunc(uye_id, kitap_id) VALUES 
-(22, 'Nutuk');
+INSERT INTO borrows(member_id, book_id) VALUES 
+(22, 1);
 
---FROEGN KEY CONSTRAINT FAILED Olmayan Üye: uyeler tablonuzda id = 22 olan bir üye kayıtlı değil.
+-- FOREIGN KEY CONSTRAINT FAILED Non-existing member: id = 22 does not exist in members table.
  
-INSERT INTO odunc (uye_id, kitap_id, gun_sayisi) VALUES 
+INSERT INTO borrows (member_id, book_id, borrow_days) VALUES 
 (1, 1, 15),
 (1, 2, 30),
 (2, 1, 7),
@@ -170,10 +164,10 @@ INSERT INTO odunc (uye_id, kitap_id, gun_sayisi) VALUES
 (3, 2, 10),
 (3, 4, 21),
 (4, 3, 14),
-(4, 5,  35),
-(5, 1,  3),
-(5, 4,  45),
-(6, 2,  18),
+(4, 5, 35),
+(5, 1, 3),
+(5, 4, 45),
+(6, 2, 18),
 (6, 5, 25),
 (7, 1, 8),
 (7, 3, 40),
@@ -184,164 +178,163 @@ INSERT INTO odunc (uye_id, kitap_id, gun_sayisi) VALUES
 (10, 1, 19),
 (10, 4, 44);
 
----Üye adı, kitap adı ve gün sayısını tek tabloda gösteren sorguyu yazınız.
+--- Select query displaying member name, book title, and borrow days in a single table.
 SELECT 
-    uyeler.ad AS uye_adi, 
-    kitaplar.kitap, 
-    odunc.gun_sayisi AS gun_sayisi
-FROM odunc
-JOIN uyeler ON odunc.uye_id = uyeler.id
-JOIN kitaplar ON odunc.kitap_id = kitaplar.id;
+    members.name AS member_name, 
+    books.title AS book_title, 
+    borrows.borrow_days
+FROM borrows
+JOIN members ON borrows.member_id = members.id
+JOIN books ON borrows.book_id = books.id;
 
------Aynı sorguya, 30 günden uzun tutulan kitapları getirecek koşul ekleyiniz.
+----- Query to filter books borrowed for more than 30 days.
 SELECT 
-    uyeler.ad AS uye_adi, 
-    kitaplar.kitap, 
-    odunc.gun_sayisi AS gun_sayisi
-FROM odunc
-JOIN uyeler ON odunc.uye_id = uyeler.id
-JOIN kitaplar ON odunc.kitap_id = kitaplar.id
-WHERE odunc.gun_sayisi &gt; 30;
-
-SELECT 
-    uyeler.ad AS uye_adi, 
-    uyeler.sehir, 
-    kitaplar.kitap, 
-    odunc.gun_sayisi AS gun_sayisi
-FROM odunc
-JOIN uyeler ON odunc.uye_id = uyeler.id
-JOIN kitaplar ON odunc.kitap_id = kitaplar.id
-WHERE uyeler.sehir = 'Erzincan';
-
----(İleri) Hiç kitap almamış üyeleri de listede göstermek için hangi JOIN türü gerekir? Yazınız.
-SELECT 
-    uyeler.ad AS uye_adi, 
-    uyeler.sehir, 
-    kitaplar.kitap, 
-    odunc.gun_sayisi
-FROM uyeler
-LEFT JOIN odunc ON uyeler.id = odunc.uye_id
-LEFT JOIN kitaplar ON odunc.kitap_id = kitaplar.id;
-
-
-Gruplama ve Toplama Fonksiyonları
-Her üyenin ortalama tutma süresini, aldığı kitap sayısını ve en uzun tutma süresini hesaplayınız.
-Bu listeyi ortalaması 20 günün üzerinde olan üyelerle sınırlandırınız. WHERE yerine neden HAVING kullanıldığını açıklayınız.
-Her kitabın kaç kez ödünç alındığını kitap adıyla gösteriniz.
-Hangi şehirden kaç üye olduğunu çoktan aza sıralayınız.
+    members.name AS member_name, 
+    books.title AS book_title, 
+    borrows.borrow_days
+FROM borrows
+JOIN members ON borrows.member_id = members.id
+JOIN books ON borrows.book_id = books.id
+WHERE borrows.borrow_days &gt; 30;
 
 SELECT 
-    uyeler.ad AS uye_adi,
-    COUNT(odunc.kitap_id) AS alinan_kitap_sayisi,
-    AVG(odunc.gun_sayisi) AS ortalama_gun,
-    MAX(odunc.gun_sayisi) AS en_uzun_gun
-FROM uyeler
-JOIN odunc ON uyeler.id = odunc.uye_id
-GROUP BY uyeler.id, uyeler.ad
-HAVING AVG(odunc.gun_sayisi) &gt; 20;
+    members.name AS member_name, 
+    members.city, 
+    books.title AS book_title, 
+    borrows.borrow_days
+FROM borrows
+JOIN members ON borrows.member_id = members.id
+JOIN books ON borrows.book_id = books.id
+WHERE members.city = 'Los Angeles';
+
+--- (Advanced) LEFT JOIN to list members even if they haven't borrowed any books.
+SELECT 
+    members.name AS member_name, 
+    members.city, 
+    books.title AS book_title, 
+    borrows.borrow_days
+FROM members
+LEFT JOIN borrows ON members.id = borrows.member_id
+LEFT JOIN books ON borrows.book_id = books.id;
+
+
+-- Grouping and Aggregation Functions
+-- Calculate average borrow duration, total books borrowed, and max borrow days per member.
+-- Filter members with an average duration greater than 20 days using HAVING instead of WHERE.
+-- Count how many times each book has been borrowed along with its title.
+-- Count members per city ordered from highest to lowest.
 
 SELECT 
-    kitaplar.kitap,
-    COUNT(odunc.kitap_id) AS odunc_alinma_sayisi
-FROM kitaplar
-LEFT JOIN odunc ON kitaplar.id = odunc.kitap_id
-GROUP BY kitaplar.id, kitaplar.kitap;
+    members.name AS member_name,
+    COUNT(borrows.book_id) AS borrowed_book_count,
+    AVG(borrows.borrow_days) AS average_days,
+    MAX(borrows.borrow_days) AS max_days
+FROM members
+JOIN borrows ON members.id = borrows.member_id
+GROUP BY members.id, members.name
+HAVING AVG(borrows.borrow_days) &gt; 20;
 
 SELECT 
-    sehir,
-    COUNT(*) AS uye_sayisi
-FROM uyeler
-GROUP BY sehir
-ORDER BY uye_sayisi DESC;
+    books.title AS book_title,
+    COUNT(borrows.book_id) AS times_borrowed
+FROM books
+LEFT JOIN borrows ON books.id = borrows.book_id
+GROUP BY books.id, books.title;
+
+SELECT 
+    city,
+    COUNT(*) AS member_count
+FROM members
+GROUP BY city
+ORDER BY member_count DESC;
 
 
-Alt Sorgu
-En az bir kitabı 30 günden uzun tutmuş üyelerin adlarını alt sorguyla listeleyiniz.
-Hiç ödünç alınmamış kitapları NOT IN ile bulunuz.
-Genel ortalamanın üzerinde süre tutulan tüm kayıtları listeleyiniz.
+-- Subquery
+-- List names of members who borrowed at least one book for more than 30 days using a subquery.
+-- Find books that have never been borrowed using NOT IN.
+-- List all records where borrow duration is above the general average.
 
-SELECT ad 
-FROM uyeler 
+SELECT name 
+FROM members 
 WHERE id IN (
-    SELECT DISTINCT uye_id 
-    FROM odunc 
-    WHERE gun_sayisi &gt; 30
+    SELECT DISTINCT member_id 
+    FROM borrows 
+    WHERE borrow_days &gt; 30
 );
 
-SELECT kitap 
-FROM kitaplar 
+SELECT title 
+FROM books 
 WHERE id NOT IN (
-    SELECT DISTINCT kitap_id 
-    FROM odunc 
-    WHERE kitap_id IS NOT NULL
+    SELECT DISTINCT book_id 
+    FROM borrows 
+    WHERE book_id IS NOT NULL
 );
 
 SELECT 
-    uyeler.ad AS uye_adi,
-    kitaplar.kitap AS kitap_adi,
-    odunc.gun_sayisi
-FROM odunc
-JOIN uyeler ON odunc.uye_id = uyeler.id
-JOIN kitaplar ON odunc.kitap_id = kitaplar.id
-WHERE odunc.gun_sayisi &gt; (
-    SELECT AVG(gun_sayisi) 
-    FROM odunc
+    members.name AS member_name,
+    books.title AS book_title,
+    borrows.borrow_days
+FROM borrows
+JOIN members ON borrows.member_id = members.id
+JOIN books ON borrows.book_id = books.id
+WHERE borrows.borrow_days &gt; (
+    SELECT AVG(borrow_days) 
+    FROM borrows
 );
 
 
-CASE
-Her ödünç kaydı için durum üretiniz: 30 günden fazla 'Gecikmiş', 15–30 arası 'Uyarı', diğerleri 'Normal'.
-Üyeleri yaşına göre 'Genç' (≤18) veya 'Yetişkin' olarak etiketleyiniz.
-(İleri) Her durumdan kaç kayıt olduğunu sayınız (CASE + GROUP BY).
+-- CASE
+-- Generate status for each record: > 30 days 'Overdue', 15–30 'Warning', others 'Normal'.
+-- Label members as 'Youth' (≤18) or 'Adult' based on age.
+-- (Advanced) Count total records per status using CASE + GROUP BY.
 
 SELECT 
-    odunc.uye_id,
-    odunc.kitap_id,
-    odunc.gun_sayisi,
+    borrows.member_id,
+    borrows.book_id,
+    borrows.borrow_days,
     CASE 
-        WHEN odunc.gun_sayisi &gt; 30 THEN 'Gecikmiş'
-        WHEN odunc.gun_sayisi BETWEEN 15 AND 30 THEN 'Uyarı'
+        WHEN borrows.borrow_days &gt; 30 THEN 'Overdue'
+        WHEN borrows.borrow_days BETWEEN 15 AND 30 THEN 'Warning'
         ELSE 'Normal'
-    END AS durum
-FROM odunc;
+    END AS status
+FROM borrows;
 
 SELECT 
-    ad,
-    yas,
+    name,
+    age,
     CASE 
-        WHEN yas &lt;= 18 THEN 'Genç'
-        ELSE 'Yetişkin'
-    END AS yas_grubu
-FROM uyeler;
+        WHEN age &lt;= 18 THEN 'Youth'
+        ELSE 'Adult'
+    END AS age_group
+FROM members;
 
 SELECT 
     CASE 
-        WHEN gun_sayisi &gt; 30 THEN 'Gecikmiş'
-        WHEN gun_sayisi BETWEEN 15 AND 30 THEN 'Uyarı'
+        WHEN borrow_days &gt; 30 THEN 'Overdue'
+        WHEN borrow_days BETWEEN 15 AND 30 THEN 'Warning'
         ELSE 'Normal'
-    END AS durum,
-    COUNT(*) AS kayit_sayisi
-FROM odunc
+    END AS status,
+    COUNT(*) AS record_count
+FROM borrows
 GROUP BY 
     CASE 
-        WHEN gun_sayisi &gt; 30 THEN 'Gecikmiş'
-        WHEN gun_sayisi BETWEEN 15 AND 30 THEN 'Uyarı'
+        WHEN borrow_days &gt; 30 THEN 'Overdue'
+        WHEN borrow_days BETWEEN 15 AND 30 THEN 'Warning'
         ELSE 'Normal'
     END;
 
 
-Index
-uyeler.ad sütununda bir index oluşturunuz. Hangi sorguları hızlandırır?
-uyeler tablosuna ALTER TABLE ile eposta sütunu ekleyip bu sütunda UNIQUE index oluşturunuz.
-İki üyeye aynı e-postayı vermeyi deneyiniz. Sonucu açıklayınız.
+-- Index
+-- Create an index on members.name.
+-- Add an email column with ALTER TABLE and create a UNIQUE index.
 
-CREATE INDEX idx_uyeler_ad ON uyeler(ad);
-   
-SELECT * FROM uyeler WHERE ad = 'Ahmet';
+CREATE INDEX idx_members_name ON members(name);
+    
+SELECT * FROM members WHERE name = 'John Doe';
 
--- 1. Üyeye e-posta atama (Başarıyla gerçekleşir):
---UPDATE uyeler SET eposta = 'ahmet@kutuphane.com' WHERE id = 1;
+-- 1. Assign email to member (Succeeds):
+-- UPDATE members SET email = 'john@library.com' WHERE id = 1;
 
--- 2. Üyeye aynı e-postayı atama denemesi (Engellenir):
---UPDATE uyeler SET eposta = 'ahmet@kutuphane.com' WHERE id = 2;
+-- 2. Try assigning same email to another member (Fails due to UNIQUE constraint):
+-- UPDATE members SET email = 'john@library.com' WHERE id = 2;
 </sql><current_tab id="1"/></tab_sql></sqlb_project>
